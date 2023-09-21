@@ -1,47 +1,47 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(45deg, #072f54, #75d20abb);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #0085ff, #ff1458);
 }
 
 .board {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    margin: 0 50px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 50px;
 }
 
 .board .dropBox {
-    position: relative;
-    width: 140px;
-    height: 140px;
-    border-left: 4px solid #fff;
-    border-bottom: 4px solid #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-right: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .board .dropBox:nth-child(3),
 .board .dropBox:nth-child(6),
-.board .dropBox:nth-child(9)
+.board .dropBox:nth-child(9) 
 {
-    border-right: none;
+  border-right: none;
 }
 
 .board .dropBox:nth-child(7),
 .board .dropBox:nth-child(8),
-.board .dropBox:nth-child(9){
-    border-right: none;
+.board .dropBox:nth-child(9) {
+  border-bottom: none;
 }
 
 .drag{
