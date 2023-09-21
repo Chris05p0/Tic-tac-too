@@ -44,6 +44,11 @@ body {
   border-bottom: none;
 }
 
+.board .dropBox div{
+    pointer-events: none;
+    scale: 1.5;
+}
+
 .drag{
     position: relative;
     display: flex;
@@ -57,12 +62,12 @@ body {
     cursor: grab;
 }
 
-.drag .dragbox{
+.drag .dragBox{
     padding: 15px;
     background: rgba(225, 255, 255, 0.1);
 }
 
-.drag .dragbox .cross{
+.cross{
     position: relative;
     width: 50px;
     height: 50px;
@@ -71,7 +76,7 @@ body {
     align-items: center;
 }
 
-.drag .dragbox .cross::before{
+.cross::before{
     content: '';
     position: absolute;
     width: 5px;
@@ -80,7 +85,7 @@ body {
     transform: rotate(45deg);
 }
 
-.drag .dragbox .cross::after{
+.cross::after{
     content: '';
     position: absolute;
     width: 100%;
@@ -89,7 +94,7 @@ body {
     transform: rotate(45deg);
 }
 
-.drag .dragbox .circle{
+.drag .dragBox .circle{
     position: relative;
     width: 50px;
     height: 50px;
@@ -99,7 +104,7 @@ body {
 
 .reset{
     position: absolute;
-    top: 70px;
+    bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 25px;
