@@ -33,8 +33,7 @@ body {
 }
 .board .dropBox:nth-child(3),
 .board .dropBox:nth-child(6),
-.board .dropBox:nth-child(9) 
-{
+.board .dropBox:nth-child(9) {
   border-right: none;
 }
 
@@ -44,75 +43,107 @@ body {
   border-bottom: none;
 }
 
-.board .dropBox div{
-    pointer-events: none;
-    scale: 1.5;
+.board .dropBox div {
+  pointer-events: none;
+  scale: 1.5;
 }
 
-.drag{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 420px;
-    width: 100px;
-    gap: 10px;
-    margin: 0 40px;
-    cursor: grab;
+.drag {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 420px;
+  width: 100px;
+  gap: 10px;
+  margin: 0 40px;
+  cursor: grab;
 }
 
-.drag .dragBox{
-    padding: 15px;
-    background: rgba(225, 255, 255, 0.1);
+.drag .dragBox {
+  padding: 15px;
+  background: rgba(225, 255, 255, 0.1);
 }
 
-.cross{
-    position: relative;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.cross {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.cross::before{
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 100%;
-    background: #fff;
-    transform: rotate(45deg);
+.cross::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background: #fff;
+  transform: rotate(45deg);
 }
 
-.cross::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    background: #fff;
-    transform: rotate(45deg);
+.cross::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: #fff;
+  transform: rotate(45deg);
 }
 
-.drag .dragBox .circle{
-    position: relative;
-    width: 50px;
-    height: 50px;
-    border: 5px solid #fff;
-    border-radius: 50%;
+.circle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 5px solid #fff;
+  border-radius: 50%;
 }
 
-.reset{
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 25px;
-    border: none;
-    outline: none;
-    background: #161616;
-    color: #fff;
-    font-size: 1.25em;
-    cursor: pointer;
+.reset {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 25px;
+  border: none;
+  outline: none;
+  background: #161616;
+  color: #fff;
+  font-size: 1.25em;
+  cursor: pointer;
 }
 
+.popup {
+  background: linear-gradient(45deg, #0085ff, #ff1458);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  font-size: 12vmin;
+}
+
+#new-game {
+  font-size: 0.6em;
+  padding: 0.5em 1em;
+  background-color: #0a0027;
+  color: #ffffff;
+  border-radius: 0.2em;
+  border: none;
+}
+
+#message {
+  color: #ffffff;
+  text-align: center;
+  font-size: 1em;
+}
+
+.popup.hide {
+  display: none;
+}
